@@ -1,5 +1,9 @@
 const Main = () => {
-    return <h1>Online Store</h1>;
-};
+    return (
+        <>
+            <h1>Online Shop</h1>
+        </>
+    )
+}
 
-export default Main;
+export default Main
