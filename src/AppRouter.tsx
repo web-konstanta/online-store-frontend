@@ -1,5 +1,5 @@
 import Footer from './components/Layouts/Footer'
-import Header from './components/Layouts/Header'
+import Header from './components/Layouts/Header/Header'
 import { publicRoutes } from './routes/publicRoutes'
 import { Routes, Route } from 'react-router-dom'
 
