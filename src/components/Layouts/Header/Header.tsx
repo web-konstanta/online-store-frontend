@@ -1,5 +1,5 @@
-import DiscountMessage from './DiscountMessage'
-import Options from './Options'
+import DiscountMessage from './DiscountMessage/DiscountMessage'
+import Options from './Options/Options'
 
 const Header = () => {
     return (
