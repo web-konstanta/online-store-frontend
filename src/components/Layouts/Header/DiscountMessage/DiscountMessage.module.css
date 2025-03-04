@@ -1,0 +1,40 @@
+.header__discount {
+	padding: 0 25px;
+	background-color: #000000;
+}
+
+.header__discountContent {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: auto;
+}
+
+.header__discountMessage {
+	text-align: center;
+
+	span {
+		text-decoration: underline;
+		font-weight: 600;
+	}
+}
+
+.header__closeDiscount {
+	cursor: pointer;
+}
+
+@media (max-width: 700px) {
+	.header__discountMessage {
+		font-size: 12px;
+	}
+	.header__discountContent {
+		justify-content: center;
+	}
+	.header__discountEmpty {
+		display: none;
+	}
+	.header__closeDiscount {
+		display: none;
+	}
+}
