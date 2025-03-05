@@ -1,0 +1,58 @@
+.footer__container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer__firstBlock {
+	max-width: 290px;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer__text {
+	margin: 20px 0 35px 0;
+	flex: 1;
+}
+
+.footer__socials {
+	max-width: 170px;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+
+	li {
+		cursor: pointer;
+	}
+}
+
+.footer__optionTitle {
+	font-weight: 500;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+.footer__optionsList {
+	padding: 0;
+	text-align: left;
+	line-height: 45px;
+
+	li {
+		font-size: 18px;
+		opacity: 0.6;
+	}
+}
+
+.footer__payment {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__paymentIcons {
+	display: flex;
+}
