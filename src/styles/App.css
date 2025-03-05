@@ -1,3 +1,7 @@
+ul, ol {
+	list-style: none;
+}
+
 .content {
 	display: flex;
 	flex-direction: column;
@@ -17,4 +21,5 @@
 	background-color: #f0f0f0;
 	width: 100%;
 	color: #000000;
+	padding: 35px 0;
 }
