@@ -1,49 +1,47 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import BurgerMenu from '../../UI/BurgerMenu/BurgerMenu'
 import classes from './Options.module.css'
 
 const Options = () => {
-    const burgerRef = useRef<HTMLDivElement>(null)
-    const burgerIconRef = useRef<HTMLDivElement>(null)
-    const closeBurgerRef = useRef<HTMLDivElement>(null)
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false)
+    const showBurgerRef = useRef<HTMLDivElement>(null)
+    const hideBurgerRef = useRef<HTMLDivElement>(null)
 
-    const showBurgerMenu = () => {
-        if (burgerRef.current) {
-            burgerRef.current.style.display = 'block'
-        }
-        if (burgerIconRef.current) {
-            burgerIconRef.current.style.display = 'none'
-        }
-        if (closeBurgerRef.current) {
-            closeBurgerRef.current.style.display = 'block'
-        }
-    }
-
-    const hideBurgerMenu = () => {
-        if (burgerRef.current) {
-            burgerRef.current.style.display = 'none'
-        }
-        if (burgerIconRef.current) {
-            burgerIconRef.current.style.display = 'block'
-        }
-        if (closeBurgerRef.current) {
-            closeBurgerRef.current.style.display = 'none'
-        }
+    const toggleBurgerMenu = function () {
+        setIsBurgerOpen((prev) => !prev)
     }
 
     return (
         <div className={classes.header__options}>
             <div
+                ref={showBurgerRef}
                 className={classes.header__burgerMenu}
-                ref={burgerIconRef}
-                onClick={showBurgerMenu}
+                onClick={() => {
+                    if (showBurgerRef.current) {
+                        showBurgerRef.current.style.display = 'none'
+                    }
+                    if (hideBurgerRef.current) {
+                        hideBurgerRef.current.style.display = 'block'
+                    }
+                    toggleBurgerMenu()
+                }}
             >
                 <img src="/images/burger-menu.png" />
             </div>
             <div
-                ref={closeBurgerRef}
-                className={classes.header__closeBurgerMenu}
-                onClick={hideBurgerMenu}
+                ref={hideBurgerRef}
+                className={`${classes.header__closeBurgerMenu} ${
+                    isBurgerOpen ? classes.visible : ''
+                }`}
+                onClick={() => {
+                    if (showBurgerRef.current) {
+                        showBurgerRef.current.style.display = 'block'
+                    }
+                    if (hideBurgerRef.current) {
+                        hideBurgerRef.current.style.display = 'none'
+                    }
+                    toggleBurgerMenu()
+                }}
             >
                 <img src="/images/close.png" />
             </div>
@@ -77,7 +75,7 @@ const Options = () => {
                     <img src="/images/account.png" width="24" height="24" />
                 </div>
             </div>
-            <BurgerMenu ref={burgerRef} />
+            <BurgerMenu isOpen={isBurgerOpen} />
         </div>
     )
 }

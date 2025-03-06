@@ -1,9 +1,8 @@
-import React from 'react'
 import classes from './BurgerMenu.module.css'
 
-const BurgerMenu = React.forwardRef<HTMLDivElement>((props, ref) => {
+const BurgerMenu = ({ isOpen }: { isOpen: boolean }) => {
     return (
-        <div ref={ref} className={classes.burger}>
+        <div className={`${classes.burger} ${isOpen ? classes.show : ''}`}>
             <ul className={classes.burger__menu}>
                 <li>Shop</li>
                 <li>On Sale</li>
@@ -12,6 +11,6 @@ const BurgerMenu = React.forwardRef<HTMLDivElement>((props, ref) => {
             </ul>
         </div>
     )
-})
+}
 
 export default BurgerMenu
