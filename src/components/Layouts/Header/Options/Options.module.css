@@ -13,7 +13,15 @@
 }
 
 .header__burgerMenu {
+	cursor: pointer;
 	display: none;
+	z-index: 2;
+}
+
+.header__closeBurgerMenu {
+	cursor: pointer;
+	display: none;
+	z-index: 2;
 }
 
 .header__optionsNavbar {
