@@ -1,5 +1,10 @@
-ul, ol {
+ul,
+ol {
 	list-style: none;
+}
+
+#root {
+	width: 100%;
 }
 
 .content {
@@ -9,15 +14,11 @@ ul, ol {
 }
 
 .header {
-	position: absolute;
-	top: 0;
 	width: 100%;
 	color: #ffffff;
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
 	background-color: #f0f0f0;
 	width: 100%;
 	color: #000000;
