@@ -3,3 +3,8 @@ export type RouteType = {
 	component: ComponentType,
 	exact: boolean
 }
+
+export type BrandsInfo = {
+	amount: number
+	description: string
+}

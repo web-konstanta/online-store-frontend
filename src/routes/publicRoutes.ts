@@ -1,6 +1,6 @@
-import Main from '../pages/Main';
+import Index from '../pages/Index';
 import { RouteType } from '../types';
 
 export const publicRoutes: Array<RouteType> = [
-	{ path: '/', component: Main, exact: true }
+	{ path: '/', component: Index, exact: true }
 ];
