@@ -6,7 +6,7 @@ const Footer = () => {
             <div className={classes.footer__container}>
                 <div className={classes.footer__firstBlock}>
                     <div>
-                        <img src="./images/logo.png" alt="" />
+                        <img src="/images/header/logo.png" alt="" />
                     </div>
                     <div className={classes.footer__text}>
                         We have clothes that suits your style and which you’re
@@ -14,16 +14,16 @@ const Footer = () => {
                     </div>
                     <ul className={classes.footer__socials}>
                         <li>
-                            <img src="./images/twitter.png" />
+                            <img src="/images/footer/twitter.png" />
                         </li>
                         <li>
-                            <img src="./images/facebook.png" />
+                            <img src="/images/footer/facebook.png" />
                         </li>
                         <li>
-                            <img src="./images/instagram.png" />
+                            <img src="/images/footer/instagram.png" />
                         </li>
                         <li>
-                            <img src="./images/github.png" />
+                            <img src="/images/footer/github.png" />
                         </li>
                     </ul>
                 </div>
@@ -69,19 +69,19 @@ const Footer = () => {
                 <div>Shop.co © 2000-2023, All Rights Reserved</div>
                 <ul className={classes.footer__paymentIcons}>
                     <li>
-                        <img src="./images/visa.png" />
+                        <img src="/images/footer/visa.png" />
                     </li>
                     <li>
-                        <img src="./images/mastercard.png" />
+                        <img src="/images/footer/mastercard.png" />
                     </li>
                     <li>
-                        <img src="./images/paypal.png" />
+                        <img src="/images/footer/paypal.png" />
                     </li>
                     <li>
-                        <img src="./images/apple-pay.png" />
+                        <img src="/images/footer/apple-pay.png" />
                     </li>
                     <li>
-                        <img src="./images/google-pay.png" />
+                        <img src="/images/footer/google-pay.png" />
                     </li>
                 </ul>
             </div>
