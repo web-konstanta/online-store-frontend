@@ -23,7 +23,7 @@ const DiscountMessage = () => {
                     onClick={() => closeDiscount()}
                 >
                     <img
-                        src="/images/close-discount-message.png"
+                        src="/images/header/close-discount-message.png"
                         alt="close discount message"
                     />
                 </div>
