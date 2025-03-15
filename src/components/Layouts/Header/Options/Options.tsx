@@ -54,7 +54,7 @@ const Options = () => {
                 className={classes.header__burgerMenu}
                 onClick={showBurgerMenu}
             >
-                <img src="/images/burger-menu.png" />
+                <img src="/images/header/burger-menu.png" />
             </div>
             <div
                 ref={hideBurgerRef}
@@ -63,10 +63,10 @@ const Options = () => {
                 }`}
                 onClick={hideBurgerMenu}
             >
-                <img src="/images/close.png" />
+                <img src="/images/header/close.png" />
             </div>
             <div className={classes.header__logo}>
-                <img src="/images/logo.png" />
+                <img src="/images/header/logo.png" />
             </div>
             <nav className={classes.header__optionsNavbar}>
                 <ul className={classes.header__optionsList}>
@@ -83,16 +83,24 @@ const Options = () => {
             <div className={classes.header__customerOptions}>
                 <div className={classes.header__searchMobile}>
                     <img
-                        src="/images/search-mobile.png"
+                        src="/images/header/search-mobile.png"
                         width="24"
                         height="24"
                     />
                 </div>
                 <div>
-                    <img src="/images/basket.png" width="24" height="24" />
+                    <img
+                        src="/images/header/basket.png"
+                        width="24"
+                        height="24"
+                    />
                 </div>
                 <div>
-                    <img src="/images/account.png" width="24" height="24" />
+                    <img
+                        src="/images/header/account.png"
+                        width="24"
+                        height="24"
+                    />
                 </div>
             </div>
             <BurgerMenu isOpen={isBurgerOpen} />

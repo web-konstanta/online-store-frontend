@@ -59,7 +59,7 @@ const FirstBlock = () => {
                 </div>
             </div>
             <div className={`${classes.firstBlock__cover} ${classes._ibg}`}>
-                <img src="./images/main-cover.png" />
+                <img src="/images/main/main-cover.png" />
             </div>
         </div>
     )
