@@ -1,4 +1,13 @@
 import classes from './Footer.module.css'
+import {
+    socialIcons,
+    companyOptions,
+    helpOptions,
+    faqOptions,
+    resourcesOptions,
+    paymentIcons,
+} from './data'
+import FooterList from './FooterList'
 
 const Footer = () => {
     return (
@@ -13,76 +22,27 @@ const Footer = () => {
                         proud to wear. From women to men.
                     </div>
                     <ul className={classes.footer__socials}>
-                        <li>
-                            <img src="/images/footer/twitter.png" />
-                        </li>
-                        <li>
-                            <img src="/images/footer/facebook.png" />
-                        </li>
-                        <li>
-                            <img src="/images/footer/instagram.png" />
-                        </li>
-                        <li>
-                            <img src="/images/footer/github.png" />
-                        </li>
+                        {socialIcons.map((icon, key) => (
+                            <li key={key}>
+                                <img src={icon} />
+                            </li>
+                        ))}
                     </ul>
                 </div>
-                <div>
-                    <div className={classes.footer__optionTitle}>COMPANY</div>
-                    <ul className={classes.footer__optionsList}>
-                        <li>About</li>
-                        <li>Features</li>
-                        <li>Works</li>
-                        <li>Career</li>
-                    </ul>
-                </div>
-                <div>
-                    <div className={classes.footer__optionTitle}>HELP</div>
-                    <ul className={classes.footer__optionsList}>
-                        <li>Customer Support</li>
-                        <li>Delivery Details</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
-                    </ul>
-                </div>
-                <div>
-                    <div className={classes.footer__optionTitle}>FAQ</div>
-                    <ul className={classes.footer__optionsList}>
-                        <li>Account</li>
-                        <li>Manage Deliveries</li>
-                        <li>Orders</li>
-                        <li>Payments</li>
-                    </ul>
-                </div>
-                <div>
-                    <div className={classes.footer__optionTitle}>RESOURCES</div>
-                    <ul className={classes.footer__optionsList}>
-                        <li>Free eBooks</li>
-                        <li>Development Tutorial</li>
-                        <li>How to - Blog</li>
-                        <li>Youtube Playlist</li>
-                    </ul>
-                </div>
+                <FooterList title="COMPANY" options={companyOptions} />
+                <FooterList title="HELP" options={helpOptions} />
+                <FooterList title="FAQ" options={faqOptions} />
+                <FooterList title="RESOURCES" options={resourcesOptions} />
             </div>
-            <hr style={{ opacity: 0.4, maxWidth: '1200px' }} />
+            <hr className={classes.footer__line} />
             <div className={classes.footer__payment}>
                 <div>Shop.co © 2000-2023, All Rights Reserved</div>
                 <ul className={classes.footer__paymentIcons}>
-                    <li>
-                        <img src="/images/footer/visa.png" />
-                    </li>
-                    <li>
-                        <img src="/images/footer/mastercard.png" />
-                    </li>
-                    <li>
-                        <img src="/images/footer/paypal.png" />
-                    </li>
-                    <li>
-                        <img src="/images/footer/apple-pay.png" />
-                    </li>
-                    <li>
-                        <img src="/images/footer/google-pay.png" />
-                    </li>
+                    {paymentIcons.map((icon, key) => (
+                        <li key={key}>
+                            <img src={icon} />
+                        </li>
+                    ))}
                 </ul>
             </div>
         </footer>
