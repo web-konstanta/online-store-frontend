@@ -38,11 +38,22 @@
 	padding: 0;
 	text-align: left;
 	line-height: 45px;
+}
 
-	li {
-		font-size: 18px;
-		opacity: 0.6;
+.footer__optionsItem {
+	font-size: 18px;
+	opacity: 0.7;
+	color: #213547;
+	font-weight: normal;
+
+	&:hover {
+		color: #213547;
 	}
+}
+
+.footer__line {
+	opacity: 0.4;
+	max-width: 1200px;
 }
 
 .footer__payment {
