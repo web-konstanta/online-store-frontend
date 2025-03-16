@@ -86,6 +86,7 @@
 	.firstBlock__content {
 		height: 100%;
 		margin-top: -65px;
+		margin-bottom: -65px;
 		background-color: #F2F0F1;
 	}
 
