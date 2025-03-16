@@ -29,37 +29,45 @@ const FirstBlock = () => {
 
     return (
         <div className={classes.firstBlock}>
-            <div className={classes.firstBlock__content}>
-                <h1 className={classes.firstBlock__title}>
-                    FIND CLOTHES THAT MATCHES YOUR STYLE
-                </h1>
-                <div>
-                    Browse through our diverse range of meticulously crafted
-                    garments, designed to bring out your individuality and cater
-                    to your sense of style.
+            <div className={classes.firstBlock__container}>
+                <div className={classes.firstBlock__content}>
+                    <h1 className={classes.firstBlock__title}>
+                        FIND CLOTHES THAT MATCHES YOUR STYLE
+                    </h1>
+                    <div>
+                        Browse through our diverse range of meticulously crafted
+                        garments, designed to bring out your individuality and
+                        cater to your sense of style.
+                    </div>
+                    <button className={classes.firstBlock__btn}>
+                        Shop Now
+                    </button>
+                    <div
+                        ref={brandsInfoRef}
+                        className={classes.firstBlock__brandsInfo}
+                    >
+                        {brandsInfo.map(
+                            (brandInfo: BrandsInfo, key: number) => (
+                                <div
+                                    key={key}
+                                    className={
+                                        classes.firstBlock__brandItemInfo
+                                    }
+                                >
+                                    <div className={classes.brandItemAmount}>
+                                        {formatBrandAmount(brandInfo.amount)}+
+                                    </div>
+                                    <p className={classes.brandItemDescription}>
+                                        {brandInfo.description}
+                                    </p>
+                                </div>
+                            )
+                        )}
+                    </div>
                 </div>
-                <button className={classes.firstBlock__btn}>Shop Now</button>
-                <div
-                    ref={brandsInfoRef}
-                    className={classes.firstBlock__brandsInfo}
-                >
-                    {brandsInfo.map((brandInfo: BrandsInfo, key: number) => (
-                        <div
-                            key={key}
-                            className={classes.firstBlock__brandItemInfo}
-                        >
-                            <div className={classes.brandItemAmount}>
-                                {formatBrandAmount(brandInfo.amount)}+
-                            </div>
-                            <p className={classes.brandItemDescription}>
-                                {brandInfo.description}
-                            </p>
-                        </div>
-                    ))}
+                <div className={`${classes.firstBlock__cover} ${classes._ibg}`}>
+                    <img src="/images/main/first-block/main-cover.png" />
                 </div>
-            </div>
-            <div className={`${classes.firstBlock__cover} ${classes._ibg}`}>
-                <img src="/images/main/main-cover.png" />
             </div>
         </div>
     )

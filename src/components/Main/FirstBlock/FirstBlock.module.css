@@ -1,4 +1,8 @@
 .firstBlock {
+	position: relative;
+}
+
+.firstBlock__container {
 	max-width: 1200px;
 	margin: auto;
 	padding: 60px 0;
