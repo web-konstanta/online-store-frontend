@@ -15,3 +15,19 @@ export type FooterOptions = {
 	name: string
 	href: string
 }
+
+export type Product = {
+	id: number
+	name: string
+	description: string
+	newPrice: number
+	oldPrice?: number
+	image?: string
+	rating: number
+	color?: ProductColor
+	size?: ProductSize
+}
+
+export type ProductColor = Pick<Product, 'id' | 'name'>
+
+export type ProductSize = Pick<Product, 'id' | 'name'>

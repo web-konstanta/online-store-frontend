@@ -1,0 +1,37 @@
+.product__listContainer {
+	max-width: 1200px;
+	margin: auto;
+	padding-bottom: 55px;
+	padding: 0 10px;
+}
+
+.product__listTitle {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 900;
+	color: #000000;
+	padding: 50px 0 25px 0;
+}
+
+.product__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.product__listBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 50px;
+
+	button {
+		background-color: inherit;
+		border: 1px solid rgb(214, 210, 210);
+		border-radius: 25px;
+		width: 200px;
+		font-size: 14px;
+		padding: 15px 0;
+	}
+}
