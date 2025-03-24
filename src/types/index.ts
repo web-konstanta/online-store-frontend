@@ -31,3 +31,10 @@ export type Product = {
 export type ProductColor = Pick<Product, 'id' | 'name'>
 
 export type ProductSize = Pick<Product, 'id' | 'name'>
+
+export type ProductCategory = {
+	id: number,
+	name: string,
+	image: string,
+	isLongImage: boolean
+}
