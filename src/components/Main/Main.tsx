@@ -4,6 +4,7 @@ import Brands from './Brands/Brands'
 import FirstBlock from './FirstBlock/FirstBlock'
 import classes from './Main.module.css'
 import ProductList from './Product/List/ProductList'
+import Catalog from './Catalog/Catalog'
 
 const Main = () => {
     const [products, setProducts] = useState<Product[]>([
@@ -56,12 +57,15 @@ const Main = () => {
                 products={products}
                 getAllProducts={getAllProducts}
             />
-            <hr style={{ maxWidth: '1200px', margin: 'auto', opacity: '0.3' }} />
+            <hr
+                style={{ maxWidth: '1200px', margin: 'auto', opacity: '0.3' }}
+            />
             <ProductList
                 title="TOP SELLING"
                 products={products}
                 getAllProducts={getAllProducts}
             />
+            <Catalog />
         </div>
     )
 }
