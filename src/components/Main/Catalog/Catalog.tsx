@@ -15,6 +15,7 @@ const Catalog = () => {
             <div className={classes.catalog__categories}>
                 {categories.map((category: ProductCategory) =>
                     <div
+                        key={category.id}
                         className={`
                             ${classes.catalog__category}
                             ${category.isLongImage ? classes.catalog__longImage : classes.catalog__shortImage}
