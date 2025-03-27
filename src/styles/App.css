@@ -25,3 +25,16 @@ ol {
 	color: #000000;
 	padding: 35px 0;
 }
+
+.embla__viewport {
+	overflow: hidden;
+}
+
+.embla__container {
+	display: flex;
+}
+
+.embla__slide {
+	flex: 0 0 100%;
+	max-width: 400px;
+}

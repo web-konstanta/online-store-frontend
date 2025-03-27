@@ -5,6 +5,7 @@ import FirstBlock from './FirstBlock/FirstBlock'
 import classes from './Main.module.css'
 import ProductList from './Product/List/ProductList'
 import Catalog from './Catalog/Catalog'
+import ReviewList from './Review/List/ReviewList'
 
 const Main = () => {
     const [products, setProducts] = useState<Product[]>([
@@ -36,6 +37,7 @@ const Main = () => {
                 getAllProducts={getAllProducts}
             />
             <Catalog />
+            <ReviewList />
         </div>
     )
 }

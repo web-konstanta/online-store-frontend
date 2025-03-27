@@ -38,3 +38,10 @@ export type ProductCategory = {
 	image: string,
 	isLongImage: boolean
 }
+
+export type Review = {
+	id: number
+	user_name: string
+	content: string
+	rating: number
+}

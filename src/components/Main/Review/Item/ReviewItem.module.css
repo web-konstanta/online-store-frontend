@@ -1,0 +1,17 @@
+.review__item {
+	padding: 25px;
+}
+
+.review__itemUser {
+	display: flex;
+}
+
+.review__itemTitle {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.review__itemText {
+	opacity: 0.5;
+	margin-top: 10px;
+}
