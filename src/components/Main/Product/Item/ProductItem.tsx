@@ -10,7 +10,7 @@ const ProductItem = ({ product }: { product: Product }) => {
                 <img src={product.image} />
             </div>
             <div className={classes.product__itemTitle}>{product.name}</div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div className={classes.product__itemRatingContainer}>
                 <Rating
                     name="read-only"
                     defaultValue={product.rating}
