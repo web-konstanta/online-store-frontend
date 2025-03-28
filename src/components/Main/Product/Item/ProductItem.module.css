@@ -17,6 +17,11 @@
 	font-weight: 700;
 }
 
+.product__itemRatingContainer {
+	display: flex;
+	align-items: center;
+}
+
 .product__itemRating {
 	font-size: 13px;
 

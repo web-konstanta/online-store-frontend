@@ -24,7 +24,7 @@ const ReviewList = () => {
             user_name: 'Sarah M.',
             content:
                 'Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.',
-            rating: 4,
+            rating: 3.5,
         },
         {
             id: 2,
@@ -38,14 +38,14 @@ const ReviewList = () => {
             user_name: 'James L.',
             content:
                 'As someone whos always on the lookout for unique fashion pieces, Im thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.',
-            rating: 5,
+            rating: 4.5,
         },
         {
             id: 4,
             user_name: 'Sarah M.',
             content:
                 'Im blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece Ive bought has exceeded my expectations.',
-            rating: 3,
+            rating: 3.5,
         },
         {
             id: 5,

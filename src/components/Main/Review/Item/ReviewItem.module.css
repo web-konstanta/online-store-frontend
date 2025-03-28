@@ -4,11 +4,17 @@
 
 .review__itemUser {
 	display: flex;
+	flex-direction: column;
 }
 
 .review__itemTitle {
 	font-size: 18px;
 	font-weight: 600;
+
+	&::after {
+		position: absolute;
+		content: url('/images/main/review/checked-user.png');
+	}
 }
 
 .review__itemText {
