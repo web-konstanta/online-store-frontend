@@ -3,7 +3,7 @@ import { ComponentType } from "react"
 export type RouteType = {
 	path: string
 	component: ComponentType
-	exact: boolean
+	exact?: boolean
 }
 
 export type BrandsInfo = {
@@ -22,9 +22,10 @@ export type Product = {
 	description: string
 	newPrice: number
 	oldPrice?: number
-	image?: string
+	featuredImage?: string
+	images?: Array<string>,
 	rating: number
-	color?: ProductColor
+	colors?: ProductColor[]
 	size?: ProductSize
 }
 

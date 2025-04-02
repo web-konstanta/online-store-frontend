@@ -6,7 +6,6 @@ import classes from './Main.module.css'
 import ProductList from './Product/List/ProductList'
 import Catalog from './Catalog/Catalog'
 import ReviewList from './Review/List/ReviewList'
-import EmailNewsLetter from './EmailNewsLetter/EmailNewsLetter'
 
 const Main = () => {
     const [products, setProducts] = useState<Product[]>([
@@ -14,7 +13,7 @@ const Main = () => {
             id: 1,
             name: 'T-shirt with Tape Detaild',
             description: '...',
-            image: '/images/static/tshirt-black.png',
+            featuredImage: '/images/static/tshirt-black.png',
             newPrice: 120,
             rating: 4.5,
         },
@@ -22,7 +21,7 @@ const Main = () => {
             id: 2,
             name: 'Skinny Fit Jeans',
             description: '...',
-            image: '/images/static/jeans.png',
+            featuredImage: '/images/static/jeans.png',
             newPrice: 240,
             oldPrice: 260,
             rating: 3.5,
@@ -31,7 +30,7 @@ const Main = () => {
             id: 3,
             name: 'Checkered Shirt',
             description: '...',
-            image: '/images/static/checkered-shirt.png',
+            featuredImage: '/images/static/checkered-shirt.png',
             newPrice: 180,
             rating: 4.5,
         },
@@ -39,7 +38,7 @@ const Main = () => {
             id: 4,
             name: 'Sleeve striped T-shirt',
             description: '...',
-            image: '/images/static/sleeve-shirt.png',
+            featuredImage: '/images/static/sleeve-shirt.png',
             newPrice: 130,
             oldPrice: 160,
             rating: 4.5,
@@ -69,7 +68,6 @@ const Main = () => {
             />
             <Catalog />
             <ReviewList />
-            <EmailNewsLetter />
         </div>
     )
 }

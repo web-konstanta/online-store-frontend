@@ -1,4 +1,6 @@
 import classes from './Footer.module.css'
+import FooterList from './FooterList'
+import EmailNewsLetter from '../../Main/EmailNewsLetter/EmailNewsLetter'
 import {
     socialIcons,
     companyOptions,
@@ -7,11 +9,11 @@ import {
     resourcesOptions,
     paymentIcons,
 } from './data'
-import FooterList from './FooterList'
 
 const Footer = () => {
     return (
         <footer className="footer">
+            <EmailNewsLetter />
             <div className={classes.footer__container}>
                 <div className={classes.footer__firstBlock}>
                     <div>
