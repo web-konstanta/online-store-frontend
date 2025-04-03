@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import ReviewItem from '../Item/ReviewItem'
 import classes from './ReviewList.module.css'
-import { Review } from '../../../../types'
+import { Review } from '@src/types'
 
 const ReviewList = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [

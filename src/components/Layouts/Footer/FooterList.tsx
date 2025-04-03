@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterOptions } from '../../../types'
+import { FooterOptions } from '@src/types'
 import classes from './Footer.module.css'
 import { Link } from 'react-router-dom'
 

@@ -1,4 +1,4 @@
-import { ProductCategory } from '../../../types'
+import { ProductCategory } from '@src/types'
 import classes from './Catalog.module.css'
 
 const categories: ProductCategory[] = [

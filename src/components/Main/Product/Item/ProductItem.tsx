@@ -1,6 +1,6 @@
-import { Product } from '../../../../types'
+import { Product } from '@src/types'
 import classes from './ProductItem.module.css'
-import { productDiscount } from '../../../../utils/common/product'
+import { productDiscount } from '@src/utils/common/product'
 import Rating from '@mui/material/Rating'
 
 const ProductItem = ({ product }: { product: Product }) => {

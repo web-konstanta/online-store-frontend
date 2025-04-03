@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Product } from '../../types'
+import { Product } from '@src/types'
 import Brands from './Brands/Brands'
 import FirstBlock from './FirstBlock/FirstBlock'
 import classes from './Main.module.css'
