@@ -24,10 +24,12 @@
 
 .product__itemRating {
 	font-size: 13px;
+	font-weight: 600;
+}
 
-	span {
-		font-weight: 600;
-	}
+.product__itemTotalRating {
+	font-size: 13px;
+	opacity: 0.4;
 }
 
 .product__itemPrices {
@@ -43,7 +45,7 @@
 }
 
 .product__itemOldPrice {
-	opacity: 0.4;
+	opacity: 0.5;
 	text-decoration: line-through;
 	font-weight: 700;
 }
