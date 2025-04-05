@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import classes from './FirstBlock.module.css'
-import { BrandsInfo } from '../../../types'
-import { formatBrandAmount } from '../../../utils/common/brandsInfo'
+import { BrandsInfo } from '@src/types'
+import { formatBrandAmount } from '@src/utils/common/brandsInfo'
 
 const FirstBlock = () => {
     const brandsInfoRef = useRef<HTMLDivElement | null>(null)

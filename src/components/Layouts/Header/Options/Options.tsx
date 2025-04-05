@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import BurgerMenu from '../../UI/BurgerMenu/BurgerMenu'
 import classes from './Options.module.css'
+import { Link } from 'react-router-dom'
 
 const Options = () => {
     const [isBurgerOpen, setIsBurgerOpen] = useState(false)
@@ -65,9 +66,9 @@ const Options = () => {
             >
                 <img src="/images/header/close.png" />
             </div>
-            <div className={classes.header__logo}>
+            <Link to="/" className={classes.header__logo}>
                 <img src="/images/header/logo.png" />
-            </div>
+            </Link>
             <nav className={classes.header__optionsNavbar}>
                 <ul className={classes.header__optionsList}>
                     <li>Shop</li>

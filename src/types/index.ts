@@ -1,14 +1,11 @@
-import { ComponentType } from "react"
-
-export type RouteType = {
-	path: string
-	component: ComponentType
-	exact: boolean
-}
-
 export type BrandsInfo = {
 	amount: number
 	description: string
+}
+
+export type BrandsIcons = {
+	path: string
+	href: string
 }
 
 export type FooterOptions = {
@@ -22,10 +19,11 @@ export type Product = {
 	description: string
 	newPrice: number
 	oldPrice?: number
-	image?: string
+	featuredImage?: string
+	images?: string[],
 	rating: number
-	color?: ProductColor
-	size?: ProductSize
+	colors?: ProductColor[]
+	sizes?: ProductSize[]
 }
 
 export type ProductColor = Pick<Product, 'id' | 'name'>

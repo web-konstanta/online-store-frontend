@@ -1,6 +1,6 @@
 .footer__container {
 	max-width: 1200px;
-	margin: auto;
+	margin: 50px auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;

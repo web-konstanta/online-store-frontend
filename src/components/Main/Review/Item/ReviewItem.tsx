@@ -1,4 +1,4 @@
-import { Review } from '../../../../types'
+import { Review } from '@src/types'
 import classes from './ReviewItem.module.css'
 import Rating from '@mui/material/Rating'
 

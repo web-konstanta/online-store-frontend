@@ -19,6 +19,12 @@ ol {
 	color: #ffffff;
 }
 
+.content__line {
+	max-width: 1200px;
+	margin: auto;
+	opacity: 0.3;
+}
+
 .footer {
 	background-color: #f0f0f0;
 	width: 100%;
