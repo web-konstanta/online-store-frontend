@@ -1,8 +1,14 @@
+import { RouteObject } from 'react-router-dom';
 import Index from '../pages/Index';
 import Product from '../pages/Product';
-import { RouteType } from '../types';
 
-export const publicRoutes: Array<RouteType> = [
-	{ path: '/', component: Index, exact: true },
-	{ path: '/product/:id', component: Product, exact: true }
+export const publicRoutes: RouteObject[] = [
+	{
+		index: true,
+		Component: Index
+	},
+	{
+		path: '/product/:id',
+		Component: Product
+	}
 ];
