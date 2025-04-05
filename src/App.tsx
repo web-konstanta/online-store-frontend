@@ -1,18 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import './styles/App.css'
-import Layout from './components/Layouts/Layout'
-import { publicRoutes } from './routes/publicRoutes'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Layout />,
-    children: [...publicRoutes],
-  },
-])
+import { router } from './routes/router'
 
 function App() {
-  return <RouterProvider router={router} />
+    return <RouterProvider router={router} />
 }
 
 export default App
