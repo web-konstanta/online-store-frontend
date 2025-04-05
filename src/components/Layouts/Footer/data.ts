@@ -1,6 +1,6 @@
 import { FooterOptions } from "../../../types";
 
-export const companyOptions: Array<FooterOptions> = [
+export const companyOptions: FooterOptions[] = [
 	{
 		name: 'About',
 		href: '#',
@@ -19,7 +19,7 @@ export const companyOptions: Array<FooterOptions> = [
 	}
 ]
 
-export const helpOptions: Array<FooterOptions> = [
+export const helpOptions: FooterOptions[] = [
 	{
 		name: 'Customer Support',
 		href: '#',
@@ -38,7 +38,7 @@ export const helpOptions: Array<FooterOptions> = [
 	}
 ]
 
-export const faqOptions: Array<FooterOptions> = [
+export const faqOptions: FooterOptions[] = [
 	{
 		name: 'Account',
 		href: '#'
@@ -57,7 +57,7 @@ export const faqOptions: Array<FooterOptions> = [
 	}
 ]
 
-export const resourcesOptions: Array<FooterOptions> = [
+export const resourcesOptions: FooterOptions[] = [
 	{
 		name: 'Free eBooks',
 		href: '#'
@@ -76,14 +76,14 @@ export const resourcesOptions: Array<FooterOptions> = [
 	}
 ]
 
-export const socialIcons: Array<string> = [
+export const socialIcons: string[] = [
 	'/images/footer/twitter.png',
 	'/images/footer/facebook.png',
 	'/images/footer/instagram.png',
 	'/images/footer/github.png'
 ]
 
-export const paymentIcons: Array<string> = [
+export const paymentIcons: string[] = [
 	'/images/footer/visa.png',
 	'/images/footer/mastercard.png',
 	'/images/footer/paypal.png',

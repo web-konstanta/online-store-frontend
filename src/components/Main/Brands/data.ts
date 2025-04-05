@@ -1,4 +1,6 @@
-export const brandsIcons: Array<{ path: string, href: string }> = [
+import { BrandsIcons } from "@src/types";
+
+export const brandsIcons: BrandsIcons[] = [
 	{
 		path: '/images/main/brands/versace.png',
 		href: '#'

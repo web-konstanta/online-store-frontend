@@ -5,7 +5,7 @@ import classes from './ProductList.module.css'
 
 type PropTypes = {
     title: string
-    products: Array<Product>
+    products: Product[]
     getAllProducts: () => void
 }
 
