@@ -1,6 +1,6 @@
 import classes from './Footer.module.css'
 import FooterList from './FooterList'
-import EmailNewsLetter from '../../Main/EmailNewsLetter/EmailNewsLetter'
+import EmailNewsLetter from '@src/components/Main/EmailNewsLetter/EmailNewsLetter'
 import {
     socialIcons,
     companyOptions,

@@ -1,12 +1,14 @@
 import classes from './ProductInfo.module.css'
-import { Product, ProductColor } from '../../types'
+import { Product, ProductColor, ProductSize } from '@src/types'
 import { Rating } from '@mui/material'
-import { productDiscount } from '../../utils/common/product'
+import { productDiscount } from '@src/utils/common/product'
+import { useState } from 'react'
 
 const product: Product = {
     id: 1,
     name: 'One Life Graphic T-Shirt',
-    description: 'This graphic t-shirt which is perfect for any occasion...',
+    description:
+        'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
     newPrice: 260,
     oldPrice: 300,
     featuredImage: '/images/static/product/featured-product.png',
@@ -21,9 +23,29 @@ const product: Product = {
         { id: 2, name: '#314F4A' },
         { id: 3, name: '#31344F' },
     ],
+    sizes: [
+        {
+            id: 1,
+            name: 'Small',
+        },
+        {
+            id: 2,
+            name: 'Medium',
+        },
+        {
+            id: 3,
+            name: 'Large',
+        },
+        {
+            id: 4,
+            name: 'XLarge',
+        },
+    ],
 }
 
 const ProductInfo = () => {
+    const [productCount, setProductCount] = useState<number>(1)
+
     return (
         <div className={classes.product__info}>
             <div className={classes.product__infoContainer}>
@@ -106,12 +128,57 @@ const ProductInfo = () => {
                                 >
                                     <input type="radio" name="color" />
                                     <span
-                                        className={classes.checkmark}
+                                        className={classes.colorCheckmark}
                                         style={{ backgroundColor: color.name }}
                                     ></span>
                                 </label>
                             ))}
                         </div>
+                    </div>
+                    <div className={classes.product__infoSizePicker}>
+                        <div className={classes.product__infoSizeTitle}>
+                            Choose Size
+                        </div>
+                        <div className={classes.product__infoSizePickerContent}>
+                            {product.sizes?.map((size: ProductSize) => (
+                                <div
+                                    key={size.id}
+                                    className={classes.product__infoSize}
+                                >
+                                    {size.name}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className={classes.product__infoCart}>
+                        <div className={classes.product__infoCartOptions}>
+                            <div
+                                className={classes.product__infoCartAction}
+                                onClick={() =>
+                                    setProductCount(
+                                        productCount === 1
+                                            ? 1
+                                            : productCount - 1
+                                    )
+                                }
+                            >
+                                <img src="/images/product/remove.png" />
+                            </div>
+                            <div className={classes.product__infoCartCount}>
+                                {productCount}
+                            </div>
+                            <div
+                                className={classes.product__infoCartAction}
+                                onClick={() =>
+                                    setProductCount(productCount + 1)
+                                }
+                            >
+                                <img src="/images/product/add.png" />
+                            </div>
+                        </div>
+                        <button className={classes.product__infoCartBtn}>
+                            Add to Cart
+                        </button>
                     </div>
                 </div>
             </div>

@@ -23,7 +23,7 @@ export type Product = {
 	images?: string[],
 	rating: number
 	colors?: ProductColor[]
-	size?: ProductSize
+	sizes?: ProductSize[]
 }
 
 export type ProductColor = Pick<Product, 'id' | 'name'>

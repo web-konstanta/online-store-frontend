@@ -6,9 +6,10 @@ import classes from './Main.module.css'
 import ProductList from './Product/List/ProductList'
 import Catalog from './Catalog/Catalog'
 import ReviewList from './Review/List/ReviewList'
+import '@src/styles/App.css'
 
 const Main = () => {
-    const [products, setProducts] = useState<Product[]>([
+    const [products] = useState<Product[]>([
         {
             id: 1,
             name: 'T-shirt with Tape Detaild',
@@ -45,27 +46,13 @@ const Main = () => {
         },
     ])
 
-    const getAllProducts = () => {
-        setProducts([...products, ...products])
-    }
-
     return (
         <div className={classes.main}>
             <FirstBlock />
             <Brands />
-            <ProductList
-                title="NEW ARRIVALS"
-                products={products}
-                getAllProducts={getAllProducts}
-            />
-            <hr
-                style={{ maxWidth: '1200px', margin: 'auto', opacity: '0.3' }}
-            />
-            <ProductList
-                title="TOP SELLING"
-                products={products}
-                getAllProducts={getAllProducts}
-            />
+            <ProductList title="NEW ARRIVALS" products={products} />
+            <hr className="content__line" />
+            <ProductList title="TOP SELLING" products={products} />
             <Catalog />
             <ReviewList />
         </div>
