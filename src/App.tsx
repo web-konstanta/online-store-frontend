@@ -1,13 +1,18 @@
-import { BrowserRouter } from 'react-router-dom'
-import AppRouter from './AppRouter'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './styles/App.css'
+import Layout from './components/Layouts/Layout'
+import { publicRoutes } from './routes/publicRoutes'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [...publicRoutes],
+  },
+])
 
 function App() {
-  return (
-    <BrowserRouter>
-      <AppRouter />
-    </BrowserRouter>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
