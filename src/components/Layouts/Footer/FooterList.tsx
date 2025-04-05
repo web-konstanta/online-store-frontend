@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 type PropTypes = {
     title: string
-    options: Array<FooterOptions>
+    options: FooterOptions[]
 }
 
 const FooterList: React.FC<PropTypes> = ({ title, options }) => {

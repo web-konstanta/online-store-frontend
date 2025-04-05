@@ -3,6 +3,11 @@ export type BrandsInfo = {
 	description: string
 }
 
+export type BrandsIcons = {
+	path: string
+	href: string
+}
+
 export type FooterOptions = {
 	name: string
 	href: string
@@ -15,7 +20,7 @@ export type Product = {
 	newPrice: number
 	oldPrice?: number
 	featuredImage?: string
-	images?: Array<string>,
+	images?: string[],
 	rating: number
 	colors?: ProductColor[]
 	size?: ProductSize
