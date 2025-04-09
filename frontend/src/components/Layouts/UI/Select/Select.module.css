@@ -1,0 +1,15 @@
+.select {
+	border-radius: 25px;
+	padding: 0 15px;
+	color: #000000;
+	font-size: 14px;
+	font-weight: 500;
+	background-color: inherit;
+	border: none;
+}
+
+@media (max-width: 496px) {
+	.select {
+		display: none;
+	}
+}
