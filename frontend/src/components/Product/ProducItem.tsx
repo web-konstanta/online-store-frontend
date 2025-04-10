@@ -3,6 +3,7 @@ import { Product, Review } from '@src/types'
 import ProductInfo from './ProductInfo/ProductInfo'
 import ProductReviewList from './ProductReview/List/ProductReviewList'
 import ProductChooseInfo from './ProductChooseInfo/ProductChooseInfo'
+import RecommendedProduct from './RecommendedProduct/RecommendedProduct'
 
 const product: Product = {
     id: 1,
@@ -108,6 +109,42 @@ const productReviews: Review[] = [
         postedAt: 'August 18, 2023',
     },
 ]
+const recommendedProducts: Product[] = [
+    {
+        id: 1,
+        name: 'T-shirt with Tape Detaild',
+        description: '...',
+        featuredImage: '/images/static/tshirt-black.png',
+        newPrice: 120,
+        rating: 4.5,
+    },
+    {
+        id: 2,
+        name: 'Skinny Fit Jeans',
+        description: '...',
+        featuredImage: '/images/static/jeans.png',
+        newPrice: 240,
+        oldPrice: 260,
+        rating: 3.5,
+    },
+    {
+        id: 3,
+        name: 'Checkered Shirt',
+        description: '...',
+        featuredImage: '/images/static/checkered-shirt.png',
+        newPrice: 180,
+        rating: 4.5,
+    },
+    {
+        id: 4,
+        name: 'Sleeve striped T-shirt',
+        description: '...',
+        featuredImage: '/images/static/sleeve-shirt.png',
+        newPrice: 130,
+        oldPrice: 160,
+        rating: 4.5,
+    },
+]
 
 const ProductItem = () => {
     return (
@@ -115,6 +152,7 @@ const ProductItem = () => {
             <ProductInfo product={product} />
             <ProductChooseInfo />
             <ProductReviewList reviews={productReviews} />
+            <RecommendedProduct products={recommendedProducts} />
         </div>
     )
 }

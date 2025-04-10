@@ -272,4 +272,9 @@
 		margin: auto;
 		justify-content: center;
 	}
+
+	.sizeCheckmark {
+		font-size: 13px;
+		padding: 7px 10px;
+	}
 }
