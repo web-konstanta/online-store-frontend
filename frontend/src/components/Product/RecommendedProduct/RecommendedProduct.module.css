@@ -1,0 +1,24 @@
+.recommended__product {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.recommended__productTitle {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 900;
+	padding: 50px 0 25px 0;
+}
+
+.recommended__productList {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 466px) {
+	.recommended__productTitle {
+		font-size: 30px;
+	}
+}

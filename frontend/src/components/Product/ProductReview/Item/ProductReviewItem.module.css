@@ -1,0 +1,30 @@
+.review__item {
+	padding: 25px;
+	max-width: 540px;
+}
+
+.review__itemUser {
+	display: flex;
+	flex-direction: column;
+}
+
+.review__itemTitle {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 10px;
+
+	&::after {
+		position: absolute;
+		content: url('/images/main/review/checked-user.png');
+	}
+}
+
+.review__itemText {
+	opacity: 0.5;
+	margin-top: 10px;
+}
+
+.review__itemDate {
+	margin-top: 25px;
+	opacity: 0.7;
+}

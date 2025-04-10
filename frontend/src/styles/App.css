@@ -1,0 +1,46 @@
+ul,
+ol {
+	list-style: none;
+}
+
+#root {
+	width: 100%;
+	background-color: #F2F0F1;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.header {
+	width: 100%;
+	color: #ffffff;
+}
+
+.content__line {
+	max-width: 1200px;
+	margin: auto;
+	opacity: 0.3;
+}
+
+.footer {
+	background-color: #f0f0f0;
+	width: 100%;
+	color: #000000;
+	padding: 35px 0;
+}
+
+.embla__viewport {
+	overflow: hidden;
+}
+
+.embla__container {
+	display: flex;
+}
+
+.embla__slide {
+	flex: 0 0 100%;
+	max-width: 400px;
+}
