@@ -19,6 +19,7 @@ export type Product = {
 	description: string
 	newPrice: number
 	oldPrice?: number
+	characters?: string
 	featuredImage?: string
 	images?: string[],
 	rating: number
