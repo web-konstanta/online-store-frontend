@@ -1,4 +1,5 @@
 .product__reviewContainer {
+	display: none;
 	margin-top: 50px;
 }
 

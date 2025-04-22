@@ -12,11 +12,19 @@
 }
 
 .product__infoImage {
+	cursor: pointer;
 	max-width: 150px;
+	margin: 5px 0;
 
 	img {
 		width: 100%;
+		border-radius: 25px;
 	}
+}
+
+.product__infoImageActive {
+	border: 1px solid #000000;
+	border-radius: 25px;
 }
 
 .product__infoContent {

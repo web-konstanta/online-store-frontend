@@ -4,6 +4,9 @@ import ProductInfo from './ProductInfo/ProductInfo'
 import ProductReviewList from './ProductReview/List/ProductReviewList'
 import ProductChooseInfo from './ProductChooseInfo/ProductChooseInfo'
 import RecommendedProduct from './RecommendedProduct/RecommendedProduct'
+import ProductDetails from './ProductDetails/ProductDetails'
+import ProductFAQs from './ProductFAQs/ProductFAQs'
+import { useRef } from 'react'
 
 const product: Product = {
     id: 1,
@@ -12,7 +15,7 @@ const product: Product = {
         'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
     newPrice: 260,
     oldPrice: 300,
-    featuredImage: '/images/static/product/featured-product.png',
+    featuredImage: '/images/static/product/product1.png',
     images: [
         '/images/static/product/product1.png',
         '/images/static/product/product2.png',
@@ -147,11 +150,21 @@ const recommendedProducts: Product[] = [
 ]
 
 const ProductItem = () => {
+    const detailsRef = useRef<HTMLDivElement>(null)
+    const reviewsRef = useRef<HTMLDivElement>(null)
+    const faqsRef = useRef<HTMLDivElement>(null)
+
     return (
         <div className={classes.product__info}>
             <ProductInfo product={product} />
-            <ProductChooseInfo />
-            <ProductReviewList reviews={productReviews} />
+            <ProductChooseInfo
+                detailsRef={detailsRef}
+                reviewsRef={reviewsRef}
+                faqsRef={faqsRef}
+            />
+            <ProductDetails ref={detailsRef} />
+            <ProductReviewList reviews={productReviews} ref={reviewsRef} />
+            <ProductFAQs ref={faqsRef} />
             <RecommendedProduct products={recommendedProducts} />
         </div>
     )
