@@ -5,6 +5,9 @@ import { productDiscount } from '@src/utils/common/product'
 import { useState } from 'react'
 
 const ProductInfo = ({ product }: { product: Product }) => {
+    const [selectedImage, setSelectedImage] = useState<string>(
+        product.featuredImage!
+    )
     const [productCount, setProductCount] = useState<number>(1)
 
     return (
@@ -12,13 +15,21 @@ const ProductInfo = ({ product }: { product: Product }) => {
             <div className={classes.product__infoImagesContainer}>
                 <div className={classes.product__infoImages}>
                     {product.images?.map((image, key) => (
-                        <div key={key} className={classes.product__infoImage}>
+                        <div
+                            key={key}
+                            className={`${classes.product__infoImage} ${
+                                selectedImage === image
+                                    ? classes.product__infoImageActive
+                                    : ''
+                            }`}
+                            onClick={() => setSelectedImage(image)}
+                        >
                             <img src={image} />
                         </div>
                     ))}
                 </div>
                 <div className={classes.product__infoFeaturedImage}>
-                    <img src={product.featuredImage} />
+                    <img src={selectedImage} />
                 </div>
             </div>
             <div className={classes.product__infoContent}>

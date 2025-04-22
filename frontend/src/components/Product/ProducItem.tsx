@@ -15,7 +15,7 @@ const product: Product = {
         'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
     newPrice: 260,
     oldPrice: 300,
-    featuredImage: '/images/static/product/featured-product.png',
+    featuredImage: '/images/static/product/product1.png',
     images: [
         '/images/static/product/product1.png',
         '/images/static/product/product2.png',
