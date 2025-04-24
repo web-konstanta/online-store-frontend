@@ -15,7 +15,7 @@ const product: Product = {
         'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
     newPrice: 260,
     oldPrice: 300,
-    characters: `<div className="product__characters"><h3>Highlights</h3><ul><li>Versatile for everyday wear</li><li>Modern graphic print on the chest</li><li>Comfortable and relaxed fit</li><li>Soft, breathable material</li></ul><h3>Fabric & Care</h3><ul><li>100% Cotton</li><li>Machine wash cold</li><li>Tumble dry low</li><li>Iron on low heat if needed</li></ul><h3>Size & Fit</h3><ul><li>Regular fit</li><li>Crew neckline</li><li>Available in Small, Medium, Large, X-Large</li><li>Model is 6'1" and wears size Medium</li></ul></div>`,
+    characters: `<h3>Highlights</h3><ul><li>Versatile for everyday wear</li><li>Modern graphic print on the chest</li><li>Comfortable and relaxed fit</li><li>Soft, breathable material</li></ul><h3>Fabric & Care</h3><ul><li>100% Cotton</li><li>Machine wash cold</li><li>Tumble dry low</li><li>Iron on low heat if needed</li></ul><h3>Size & Fit</h3><ul><li>Regular fit</li><li>Crew neckline</li><li>Available in Small, Medium, Large, X-Large</li><li>Model is 6'1" and wears size Medium</li></ul>`,
     featuredImage: '/images/static/product/product1.png',
     images: [
         '/images/static/product/product1.png',
