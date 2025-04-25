@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Review } from '@src/types'
+import { Review, ReviewSortOption } from '@src/types'
 import classes from './ProductReviewList.module.css'
 import ProductReviewItem from '../Item/ProductReviewItem'
 import Select from '@src/components/Layouts/UI/Select/Select'
+import { useSortedReviews } from '@src/hooks/useSortedReviews'
 
 const selectOptions = [
     {
@@ -23,10 +24,26 @@ const selectOptions = [
     },
 ]
 
-const ProductReviewList = React.forwardRef<HTMLDivElement, { reviews: Review[] }>(
-    ({ reviews }: { reviews: Review[] }, ref) => {
+const ProductReviewList = React.forwardRef<
+    HTMLDivElement,
+    { reviews: Review[] }
+>(
+    (
+        {
+            reviews,
+        }: {
+            reviews: Review[]
+        },
+        ref
+    ) => {
         const [showAll, setShowAll] = useState(false)
         const visibleReviews = showAll ? reviews : reviews.slice(0, 6)
+        const [filterOptions, setFilterOptions] = useState({ sort: '' })
+
+        const sortedReviews = useSortedReviews(
+            reviews,
+            filterOptions.sort as ReviewSortOption
+        )
 
         return (
             <div className={classes.product__reviewContainer} ref={ref}>
@@ -38,7 +55,15 @@ const ProductReviewList = React.forwardRef<HTMLDivElement, { reviews: Review[] }
                         </span>
                     </div>
                     <div className={classes.product__reviewOptionsContainer}>
-                        <Select options={selectOptions} />
+                        <Select
+                            options={selectOptions}
+                            onChange={(e) =>
+                                setFilterOptions({
+                                    ...filterOptions,
+                                    sort: e.target.value,
+                                })
+                            }
+                        />
                         <button className={classes.product__reviewOptionsBtn}>
                             Write a Review
                         </button>
@@ -49,7 +74,7 @@ const ProductReviewList = React.forwardRef<HTMLDivElement, { reviews: Review[] }
                         <ProductReviewItem key={review.id} review={review} />
                     ))}
                 </div>
-                {reviews.length > 6 && (
+                {sortedReviews.length > 6 && (
                     <div className={classes.product__reviewBtn}>
                         <button onClick={() => setShowAll(!showAll)}>
                             {showAll ? 'Show Less' : 'Load More Reviews'}

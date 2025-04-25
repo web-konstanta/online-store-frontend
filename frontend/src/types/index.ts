@@ -43,5 +43,7 @@ export type Review = {
 	userName: string
 	content: string
 	rating: number
-	postedAt?: string
+	postedAt: string
 }
+
+export type ReviewSortOption = 'latest' | 'oldest' | 'highest' | 'lowest'
