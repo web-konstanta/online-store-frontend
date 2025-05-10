@@ -1,0 +1,25 @@
+.product__characters>ul>li {
+	position: relative;
+	padding-left: 1em;
+}
+
+.product__characters>ul>li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.5em;
+	width: 0.5em;
+	height: 0.5em;
+	background-color: rgb(48, 50, 154);
+	border-radius: 50%;
+}
+
+.product__details {
+	padding: 0 15px;
+}
+
+.product__detailsTitle {
+	font-size: 25px;
+	font-weight: 600;
+	margin-right: 5px;
+}

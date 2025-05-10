@@ -19,6 +19,7 @@ export type Product = {
 	description: string
 	newPrice: number
 	oldPrice?: number
+	characters?: string
 	featuredImage?: string
 	images?: string[],
 	rating: number
@@ -42,5 +43,7 @@ export type Review = {
 	userName: string
 	content: string
 	rating: number
-	postedAt?: string
+	postedAt: string
 }
+
+export type ReviewSortOption = 'latest' | 'oldest' | 'highest' | 'lowest'
